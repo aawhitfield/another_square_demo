@@ -1,3 +1,4 @@
+import 'package:another_square/another_square.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -40,8 +41,16 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
+        onPressed: () async {
+          SquareClient? squareClient = SquareClient(
+              applicationId: 'sandbox-sq0idb-8gHyay1byds6xd-dB0Iw6g',
+              clientId: 'sandbox-sq0idb-8gHyay1byds6xd-dB0Iw6g',
+              clientSecret: 'sandbox-sq0csb-3m9WHFzmUYJOvX8BWGAi2Pdc7oQNiZT503OLXIPt8Z8'
+          );
+
+          await squareClient.initialize();
+        },
+        tooltip: 'Create Order',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
