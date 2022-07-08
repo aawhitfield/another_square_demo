@@ -1,6 +1,6 @@
 # another_square_demo
 
-A new Flutter project.
+A demo Flutter project showing how to get started with the another_square package to add Square developer APIs to your Flutter app.
 
 ## Getting Started
 
